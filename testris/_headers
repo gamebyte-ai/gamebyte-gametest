@@ -1,8 +1,0 @@
-/Build/*.wasm
-  Content-Type: application/wasm
-
-/Build/*.data
-  Content-Type: application/octet-stream
-
-/Build/*.symbols.json
-  Content-Type: application/octet-stream
