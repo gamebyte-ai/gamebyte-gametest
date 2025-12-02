@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameByte.ai - Game Showcase</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Background Effects -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <header>
+    <nav>
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="GameByte" class="logo-icon" />
+        <span>GameByte<span class="logo-ai">.ai</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#games">Games</a>
+        <a href="https://gamebyte.ai" target="_blank" rel="noopener">Main Site</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Game Test Environment
+        </div>
+        <h1>Game <span class="gradient-text">Showcase</span></h1>
+        <p class="hero-subtitle">
+          Experience our collection of AI-powered games. Built with cutting-edge technology for maximum fun and engagement.
+        </p>
+        <a href="#games" class="cta-button">
+          <span>Explore Games</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-card card-1">
+          <div class="card-icon">🎮</div>
+        </div>
+        <div class="floating-card card-2">
+          <div class="card-icon">🚀</div>
+        </div>
+        <div class="floating-card card-3">
+          <div class="card-icon">⚡</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="games-section">
+      <div class="section-header">
+        <h2>Available Games</h2>
+        <p>Click on any game to start playing instantly</p>
+      </div>
+
+      <div class="games-grid" id="gamesGrid">
+        <!-- Games will be dynamically inserted here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <img src="/logo.svg" alt="GameByte" class="logo-icon" />
+          <span>GameByte<span class="logo-ai">.ai</span></span>
+        </a>
+        <p>AI-Powered Gaming Experience</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://gamebyte.ai" target="_blank" rel="noopener">Visit Main Site</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 GameByte.ai - All rights reserved</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
