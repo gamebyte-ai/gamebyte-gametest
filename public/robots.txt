@@ -1,0 +1,11 @@
+# GameByte.ai Game Showcase
+# https://gametest.gamebyte.ai
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://gametest.gamebyte.ai/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

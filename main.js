@@ -18,27 +18,31 @@ const games = [
   }
 ];
 
-// Create game card HTML
+// Create game card HTML with SEO-friendly structure
 function createGameCard(game) {
   return `
-    <a href="/${game.id}/" class="game-card">
-      <div class="game-thumbnail" style="--card-color: ${game.color}">
-        <div class="game-icon">${game.icon}</div>
-      </div>
-      <div class="game-card-content">
-        <h3 class="game-title">${game.title}</h3>
-        <p class="game-description">${game.description}</p>
-        <div class="game-tags">
-          ${game.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+    <article class="game-card" role="listitem" itemscope itemtype="https://schema.org/VideoGame">
+      <a href="/${game.id}/" aria-label="Play ${game.title}" title="Play ${game.title} - Free Online Game">
+        <div class="game-thumbnail" style="--card-color: ${game.color}">
+          <div class="game-icon" aria-hidden="true">${game.icon}</div>
         </div>
-        <div class="play-indicator">
-          <span>Play Now</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <div class="game-card-content">
+          <h3 class="game-title" itemprop="name">${game.title}</h3>
+          <p class="game-description" itemprop="description">${game.description}</p>
+          <div class="game-tags" aria-label="Game categories">
+            ${game.tags.map(tag => `<span class="tag" itemprop="genre">${tag}</span>`).join('')}
+          </div>
+          <div class="play-indicator">
+            <span>Play Now</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <meta itemprop="gamePlatform" content="Web Browser, Mobile" />
+          <meta itemprop="applicationCategory" content="Game" />
         </div>
-      </div>
-    </a>
+      </a>
+    </article>
   `;
 }
 
